@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaTestLatest.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaTestLatest.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaTestLatest"
+		>
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<StackPanel>
+		<StackPanel Orientation="Horizontal">
+			<Button Command="{Binding FirstViewCommand}">B1</Button>
+			<Button Command="{Binding SecondViewCommand}">B2</Button>
+			<Button Command="{Binding ThirdViewCommand}">B3</Button>
+		</StackPanel>
+		<Panel>
+			<ContentControl Content="{Binding Content}"/>
+		</Panel>
+	</StackPanel>
+
+</Window>
